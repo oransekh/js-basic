@@ -1,0 +1,12 @@
+/* styleing sub-header*/
+#menu-toggle {
+  font-size: 25px;
+}
+
+#cart {
+  font-size: 20px;
+}
+
+.hidde {
+  overflow-x: hidden;
+}
