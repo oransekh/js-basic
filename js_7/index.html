@@ -90,34 +90,43 @@
     <div class="p-6 h-full bg-white flex items-center justify-center hidden">
       <p class="text-gray-500 text-xl">Cart is empty</p>
     </div>
-
-    <!--Cart Items -->
-
-    <!-- <div class="p-6 h-full bg-white flex items-center justify-center " > -->
-     
-      <div class="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto">
-        <div class="flex items-center justify-between">
-          <div>
-            <h2 class="text-2xl font-bold">I'm a product</h2>
-            <p class="text-gray-600 text-lg">$15.00</p>
+     <!--card list items-->
+     <div class="p-6 max-w-md mx-auto border-black bg-white relative">
+      <!-- Product Section -->
+      <div class="flex items-start space-x-4 mb-6">
+        <!-- Product Image -->
+        <img src="img/download.jpeg" alt="Product" class="w-20 h-20 object-cover border">
+        
+        <!-- Product Info -->
+        <div>
+          <h3 class="text-gray-800 text-lg font-semibold">I'm a product</h3>
+          <p class="text-gray-700 text-md">$15.00</p>
+          <!-- Quantity Selector -->
+          <div class="flex items-center space-x-2 mt-2">
+            <button class="px-3 py-1 border border-black bg-gray-100 hover:bg-gray-200">-</button>
+            <span class="px-4 py-1 border border-black bg-white">1</span>
+            <button class="px-3 py-1 border border-black bg-gray-100 hover:bg-gray-200">+</button>
           </div>
-          <div class="flex items-center space-x-2">
-            <button class="bg-gray-200 hover:bg-gray-300 rounded-full p-2">-</button>
-            <span class="text-gray-800 text-lg">1</span>
-            <button class="bg-gray-200 hover:bg-gray-300 rounded-full p-2">+</button>
-          </div>
-        </div>
-        <div class="mt-6">
-          <p class="text-gray-600 text-lg">Subtotal</p>
-          <p class="text-gray-800 text-2xl font-bold">$15.00</p>
-        </div>
-        <div class="mt-6">
-          <button class="bg-black text-white w-full py-3 rounded-md hover:bg-gray-800">
-            View Cart
-          </button>
         </div>
       </div>
-    <!-- </div> -->
+    
+      <!-- Subtotal and Button Section -->
+      <div class="fixed bottom-0 left-0 w-full bg-white border-t border-black px-6 py-4">
+        <!-- Subtotal -->
+        <div class="mb-4">
+          <p class="text-gray-800 text-md">Subtotal</p>
+          <p class="text-gray-800 text-lg font-semibold">$15.00</p>
+        </div>
+    
+        <!-- View Cart Button -->
+        <button class="w-full py-3 bg-black text-white text-lg font-semibold hover:bg-gray-800 transition">
+          View Cart
+        </button>
+      </div>
+    </div>
+    
+    
+    
   </div>
 </div>
 
@@ -230,8 +239,9 @@
             <div
               class="w-full h-80 bg-gray-100 flex items-center justify-center"
             >
+            
               <img
-                src="img/tshirt1.jpeg"
+                src="img/1080p-pictures-48acoppzbjsvyrmg.jpg"
                 alt="Product 1"
                 class="w-full h-full object-contain"
               />

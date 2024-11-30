@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!--link main.css-->
+    <link rel="stylesheet" href="style.css" />
+    <!--link for icon-->
+    <script
+      src="https://kit.fontawesome.com/bd46512024.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="hidde">
+    <!-- Navbar -->
+    <!-- Navbar Section -->
+<nav class="sticky top-0 z-10">
+  <!-- Top Sale Banner -->
+  <div class="bg-black text-white text-center py-2 text-sm">
+    Sale is on! 25% off sitewide using TEES25 at checkout
+  </div>
+
+  <!-- Main Navbar -->
+  <div class="bg-white border-b border-black">
+    <div class="mx-auto flex items-center justify-between h-20">
+      <!-- Logo Section -->
+      <div class="flex items-center bg-lime-400 px-5 py-3 border-r border-black h-20 md:w-auto w-full justify-between" style="background-color: #d6ff37">
+        <span class="font-bold text-2xl text-black whitespace-nowrap">T SHOP</span>
+
+        <!-- Mobile Menu Icon -->
+        <div class="md:hidden space-x-2">
+          <i class="fa-solid fa-cart-shopping" id="mobileMenu"></i>
+          <i class="fa-solid fa-bars" id="menu-toggle"></i>
+        </div>
+      </div>
+
+      <!-- Desktop Menu Links aligned to the left -->
+      <div class="hidden md:flex md:flex-1 justify-end space-x-5 items-center pl-8">
+        <a href="#" class="text-gray-700 hover:text-black border-r border-black pr-8 h-20 flex items-center">New</a>
+        <a href="#" class="text-gray-700 hover:text-black border-r border-black pr-8 h-20 flex items-center">Women</a>
+        <a href="#" class="text-gray-700 hover:text-black pr-8 h-20 flex items-center">Men</a>
+      </div>
+
+      <!-- Desktop Icons and Login -->
+      <div class="hidden md:flex items-center space-x-4 border-l border-black pl-9 pr-8 h-20">
+        <a href="#" class="text-black hover:text-gray-700 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-5 0-9 2-9 5v1h18v-1c0-3-4-5-9-5z"/>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-700 hover:text-black">Log In</a>
+        <a href="#" class="relative flex items-center" id="add">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black hover:text-gray-700" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7 4h14l-1.5 9h-13L7 4zm0-2a1 1 0 0 0-1 1v1H2v2h2.08l1.323 7.947c-.023.085-.023.175-.023.264C5.38 17.763 6.617 19 8.263 19h9.474c1.646 0 2.883-1.237 2.883-2.789 0-.09 0-.179-.023-.264L21.92 6H8V5a1 1 0 0 0-1-1zm9 18c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zM8 20c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2z"/>
+          </svg>
+          <span class="absolute top-0 right-0 bg-lime-400 text-black rounded-full text-xs w-4 h-4 flex items-center justify-center">5</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" 
+    class="md:hidden hidden flex flex-col items-center bg-white border-t border-black transition-transform duration-700 transform -translate-y-full">
+ <a href="#" class="py-4 px-4 text-black text-2xl font-bold hover:bg-gray-100 border-b border-black">New</a>
+ <a href="#" class="py-4 px-4 text-black text-2xl font-bold hover:bg-gray-100 border-b border-black">Women</a>
+ <a href="#" class="py-4 px-4 text-black text-2xl font-bold hover:bg-gray-100 border-b border-black">Men</a>
+ <a href="#" class="py-4 px-4 text-black text-2xl font-bold hover:bg-gray-100">Shop</a>
+</div>
+
+
+
+    
+  </div>
+</nav>
+
+<!-- Cart Menu for Desktop -->
+<div id="cartMenu" class="fixed top-0 right-0 transition-transform duration-1000 transform translate-x-full hidden md:block h-screen z-20">
+  <div class="h-full w-80 bg-white">
+    <!-- Header -->
+    <div class="bg-lime-400 w-full h-20 flex items-center px-4" style="background-color: #d6ff37;">
+      <i style="font-size: 24px;" id="close" class="fa-solid fa-chevron-right cursor-pointer mr-4"></i>
+      <span class="text-3xl font-semibold">Cart</span>
+    </div>
+    <!--  Empty Message -->
+    <div class="p-6 h-full bg-white flex items-center justify-center hidden">
+      <p class="text-gray-500 text-xl">Cart is empty</p>
+    </div>
+     <!--card list items-->
+     <div class="p-6 max-w-md mx-auto border-black bg-white relative">
+      <!-- Product Section -->
+      <div class="flex items-start space-x-4 mb-6">
+        <!-- Product Image -->
+        <img src="img/download.jpeg" alt="Product" class="w-20 h-20 object-cover border">
+        
+        <!-- Product Info -->
+        <div>
+          <h3 class="text-gray-800 text-lg font-semibold">I'm a product</h3>
+          <p class="text-gray-700 text-md">$15.00</p>
+          <!-- Quantity Selector -->
+          <div class="flex items-center space-x-2 mt-2">
+            <button class="px-3 py-1 border border-black bg-gray-100 hover:bg-gray-200">-</button>
+            <span class="px-4 py-1 border border-black bg-white">1</span>
+            <button class="px-3 py-1 border border-black bg-gray-100 hover:bg-gray-200">+</button>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Subtotal and Button Section -->
+      <div class="fixed bottom-0 left-0 w-full bg-white border-t border-black px-6 py-4">
+        <!-- Subtotal -->
+        <div class="mb-4">
+          <p class="text-gray-800 text-md">Subtotal</p>
+          <p class="text-gray-800 text-lg font-semibold">$15.00</p>
+        </div>
+    
+        <!-- View Cart Button -->
+        <button class="w-full py-3 bg-black text-white text-lg font-semibold hover:bg-gray-800 transition">
+          View Cart
+        </button>
+      </div>
+    </div>
+    
+    
+    
+  </div>
+</div>
+
+<!-- Cart Menu for Mobile -->
+<div id="mobileCartMenu" class="fixed top-0 left-0 right-0 bottom-0 bg-white z-10 hidden h-screen">
+  <!-- Apply custom background color to the entire header container -->
+  <div class="w-full h-20 flex items-center justify-between px-4" style="background-color: #d6ff37;">
+    <div class="flex items-center">
+      <i style="font-size: 30px;" id="closeMobile" class="fa-solid fa-chevron-right cursor-pointer"></i>
+      <span class="ml-4 text-3xl">Cart</span>
+    </div>
+  </div>
+  
+  <!-- Mobile Cart Content -->
+  <div class="p-6 h-full bg-white flex items-center justify-center">
+    <p class="text-gray-500 text-xl">Cart is empty</p>
+  </div>
+</div>
+    
+   <main>
+    <div class="max-w-4xl mx-auto bg-white p-6">
+        <!-- Cart Section -->
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- My Cart -->
+            <div class="flex-1">
+                <h2 class="text-xl font-bold mb-4">My cart</h2>
+                <div class="flex items-center gap-4">
+                    <!-- Product Image -->
+                    <img src="https://via.placeholder.com/100" alt="Product" class="w-20 h-20 border rounded-md" />
+
+                    <!-- Product Details -->
+                    <div class="flex-1">
+                        <p class="font-medium">I'm a product</p>
+                        <p class="text-gray-600">$15.00</p>
+                    </div>
+
+                    <!-- Quantity Selector -->
+                    <div class="flex items-center border ">
+                        <button class="px-2 text-gray-700 hover:bg-gray-100">-</button>
+                        <input type="text" value="48" class="w-12 text-center border-x px-1" />
+                        <button class="px-2 text-gray-700 hover:bg-gray-100">+</button>
+                    </div>
+
+                    <!-- Total Price -->
+                    <p class="w-16 text-right font-medium">$720.00</p>
+
+                    <!-- Delete Button -->
+                    <button class="text-gray-500 hover:text-red-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Promo Code and Note -->
+                <div class="mt-6 space-y-4">
+                    <input type="text" placeholder="Enter a promo code"
+                        class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-black" />
+                    <textarea placeholder="Add a note"
+                        class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-black"></textarea>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="w-full md:w-80">
+                <h2 class="text-xl font-bold mb-4">Order summary</h2>
+                <div class="space-y-4">
+                    <div class="flex justify-between text-gray-700">
+                        <p>Subtotal</p>
+                        <p>$720.00</p>
+                    </div>
+                    <div>
+                        <a href="#" class="text-sm text-blue-500 hover:underline">Estimate Delivery</a>
+                    </div>
+                    <div class="border-t pt-4 flex justify-between text-black font-bold">
+                        <p>Total</p>
+                        <p>$720.00</p>
+                    </div>
+                </div>
+                <button
+                    class="mt-6 w-full py-2 bg-black text-white font-semibold  hover:bg-gray-800 transition">
+                    Checkout
+                </button>
+                <p class="mt-2 text-sm text-gray-500 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-4 w-4 mr-1 text-gray-700"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 10h1M4 10h16M5 10H4v10a2 2 0 002 2h12a2 2 0 002-2V10H5zM15 10h1M9 10h6M10 10H9H8m2 0V7h4v3M10 10H9H8" />
+                    </svg>
+                    Secure Checkout
+                </p>
+            </div>
+        </div>
+    </div>
+   </main>
+    <!--footer-->
+    <footer class="py-10 bg-black">
+      <!-- Footer Top Section -->
+      <div class="max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- T SHOP Section with Black Background -->
+        <div class="bg-black text-white px-6  ">
+          <h2 class="text-xl font-bold mb-4">T SHOP</h2>
+          <p>info@mysite.com</p>
+          <p>Tel: 123-456-7890</p>
+          <!-- Social Icons -->
+          <div class="flex space-x-4 mt-4">
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-pinterest"></i></a>
+            <a href="#" class="hover:text-gray-300"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+    
+        <!-- Other Sections with White Background -->
+        <div class="text-white p-6">
+          <h3 class="text-lg font-semibold mb-3">Shop</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-gray-500">New</a></li>
+            <li><a href="#" class="hover:text-gray-500">Women</a></li>
+            <li><a href="#" class="hover:text-gray-500">Men</a></li>
+          </ul>
+        </div>
+    
+        <div class="text-white p-6">
+          <h3 class="text-lg font-semibold mb-3">Our Store</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-gray-500">About Us</a></li>
+            <li><a href="#" class="hover:text-gray-500">Subscribe</a></li>
+            <li><a href="#" class="hover:text-gray-500">FAQ</a></li>
+          </ul>
+        </div>
+    
+        <div class="text-white p-6">
+          <h3 class="text-lg font-semibold mb-3">Terms & Conditions</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-gray-500">Store Policy</a></li>
+            <li><a href="#" class="hover:text-gray-500">Shipping & Returns</a></li>
+            <li><a href="#" class="hover:text-gray-500">Payment Methods</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <!-- Footer Bottom Section -->
+      <div class="bg-[#d6ff37] py-4 text-center text-black">
+        <p>© 2035 by T Shop. Powered and secured by <a href="#" class="underline">oran sk</a></p>
+      </div>
+    </footer>
+    
+    
+    <!--link script file-->
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>
