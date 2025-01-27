@@ -80,7 +80,7 @@
 
 <!-- Cart Menu for Desktop -->
 <div id="cartMenu" class="fixed top-0 right-0 transition-transform duration-1000 transform translate-x-full hidden md:block h-screen z-20">
-  <div class="h-full w-80 bg-white">
+  <div class="h-full w-80 bg-white ">
     <!-- Header -->
     <div class="bg-lime-400 w-full h-20 flex items-center px-4" style="background-color: #d6ff37;">
       <i style="font-size: 24px;" id="close" class="fa-solid fa-chevron-right cursor-pointer mr-4"></i>
@@ -91,7 +91,7 @@
       <p class="text-gray-500 text-xl">Cart is empty</p>
     </div>
      <!--card list items-->
-     <div class="p-6 max-w-md mx-auto border-black bg-white relative">
+     <div class="p-6 max-w-md mx-auto border-black bg-white h-9/10 overflow-x-scroll ">
       <!-- Product Section -->
       <div class="flex items-start space-x-4 mb-6">
         <!-- Product Image -->
@@ -109,7 +109,96 @@
           </div>
         </div>
       </div>
-    
+
+      <!--more products-->
+      <div class="flex items-start space-x-4 mb-6">
+        <!-- Product Image -->
+        <img src="img/download.jpeg" alt="Product" class="w-20 h-20 object-cover border">
+        
+        <!-- Product Info -->
+        <div>
+          <h3 class="text-gray-800 text-lg font-semibold">I'm a product</h3>
+          <p class="text-gray-700 text-md">$15.00</p>
+          <!-- Quantity Selector -->
+          <div class="flex items-center space-x-2 mt-2">
+            <button class="px-3 py-1 border border-black bg-gray-100 hover:bg-gray-200">-</button>
+            <span class="px-4 py-1 border border-black bg-white">1</span>
+            <button class="px-3 py-1 border border-black bg-gray-100 hover:bg-gray-200">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!--more products-->
+      <div class="flex items-start space-x-4 mb-6">
+        <!-- Product Image -->
+        <img src="img/download.jpeg" alt="Product" class="w-20 h-20 object-cover border">
+        
+        <!-- Product Info -->
+        <div>
+          <h3 class="text-gray-800 text-lg font-semibold">I'm a product</h3>
+          <p class="text-gray-700 text-md">$15.00</p>
+          <!-- Quantity Selector -->
+          <div class="flex items-center space-x-2 mt-2">
+            <button class="px-3 py-1 border border-black bg-gray-100 hover:bg-gray-200">-</button>
+            <span class="px-4 py-1 border border-black bg-white">1</span>
+            <button class="px-3 py-1 border border-black bg-gray-100 hover:bg-gray-200">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!--more products-->
+      <div class="flex items-start space-x-4 mb-6">
+        <!-- Product Image -->
+        <img src="img/download.jpeg" alt="Product" class="w-20 h-20 object-cover border">
+        
+        <!-- Product Info -->
+        <div>
+          <h3 class="text-gray-800 text-lg font-semibold">I'm a product</h3>
+          <p class="text-gray-700 text-md">$15.00</p>
+          <!-- Quantity Selector -->
+          <div class="flex items-center space-x-2 mt-2">
+            <button class="px-3 py-1 border border-black bg-gray-100 hover:bg-gray-200">-</button>
+            <span class="px-4 py-1 border border-black bg-white">1</span>
+            <button class="px-3 py-1 border border-black bg-gray-100 hover:bg-gray-200">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!--more products-->
+      <div class="flex items-start space-x-4 mb-6">
+        <!-- Product Image -->
+        <img src="img/download.jpeg" alt="Product" class="w-20 h-20 object-cover border">
+        
+        <!-- Product Info -->
+        <div>
+          <h3 class="text-gray-800 text-lg font-semibold">I'm a product</h3>
+          <p class="text-gray-700 text-md">$15.00</p>
+          <!-- Quantity Selector -->
+          <div class="flex items-center space-x-2 mt-2">
+            <button class="px-3 py-1 border border-black bg-gray-100 hover:bg-gray-200">-</button>
+            <span class="px-4 py-1 border border-black bg-white">1</span>
+            <button class="px-3 py-1 border border-black bg-gray-100 hover:bg-gray-200">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!--more products-->
+      <div class="flex items-start space-x-4 mb-6">
+        <!-- Product Image -->
+        <img src="img/download.jpeg" alt="Product" class="w-20 h-20 object-cover border">
+        
+        <!-- Product Info -->
+        <div>
+          <h3 class="text-gray-800 text-lg font-semibold">I'm a product</h3>
+          <p class="text-gray-700 text-md">$15.00</p>
+          <!-- Quantity Selector -->
+          <div class="flex items-center space-x-2 mt-2">
+            <button class="px-3 py-1 border border-black bg-gray-100 hover:bg-gray-200">-</button>
+            <span class="px-4 py-1 border border-black bg-white">1</span>
+            <button class="px-3 py-1 border border-black bg-gray-100 hover:bg-gray-200">+</button>
+          </div>
+        </div>
+      </div>
       <!-- Subtotal and Button Section -->
       <div class="fixed bottom-0 left-0 w-full bg-white border-t border-black px-6 py-4">
         <!-- Subtotal -->
@@ -119,9 +208,12 @@
         </div>
     
         <!-- View Cart Button -->
-        <button class="w-full py-3 bg-black text-white text-lg font-semibold hover:bg-gray-800 transition">
-          View Cart
-        </button>
+        <a href="cart.html" class="w-full block">
+          <button class="w-full py-3 bg-black text-white text-lg font-semibold hover:bg-gray-800 transition">
+            View Cart
+          </button>
+        </a>
+        
       </div>
     </div>
     

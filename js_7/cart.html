@@ -151,7 +151,7 @@
         <!-- Cart Section -->
         <div class="flex flex-col md:flex-row gap-8">
             <!-- My Cart -->
-            <div class="flex-1">
+            <div class="flex-1 space-y-8">
                 <h2 class="text-xl font-bold mb-4">My cart</h2>
                 <div class="flex items-center gap-4">
                     <!-- Product Image -->
@@ -169,6 +169,7 @@
                         <input type="text" value="48" class="w-12 text-center border-x px-1" />
                         <button class="px-2 text-gray-700 hover:bg-gray-100">+</button>
                     </div>
+                    
 
                     <!-- Total Price -->
                     <p class="w-16 text-right font-medium">$720.00</p>
@@ -180,13 +181,128 @@
                         </svg>
                     </button>
                 </div>
-                <!-- Promo Code and Note -->
-                <div class="mt-6 space-y-4">
-                    <input type="text" placeholder="Enter a promo code"
-                        class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-black" />
-                    <textarea placeholder="Add a note"
-                        class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-black"></textarea>
+                <div class="flex items-center gap-4">
+                    <!-- Product Image -->
+                    <img src="https://via.placeholder.com/100" alt="Product" class="w-20 h-20 border rounded-md" />
+
+                    <!-- Product Details -->
+                    <div class="flex-1">
+                        <p class="font-medium">I'm a product</p>
+                        <p class="text-gray-600">$15.00</p>
+                    </div>
+
+                    <!-- Quantity Selector -->
+                    <div class="flex items-center border ">
+                        <button class="px-2 text-gray-700 hover:bg-gray-100">-</button>
+                        <input type="text" value="48" class="w-12 text-center border-x px-1" />
+                        <button class="px-2 text-gray-700 hover:bg-gray-100">+</button>
+                    </div>
+                    
+
+                    <!-- Total Price -->
+                    <p class="w-16 text-right font-medium">$720.00</p>
+
+                    <!-- Delete Button -->
+                    <button class="text-gray-500 hover:text-red-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
                 </div>
+                <div class="flex items-center gap-4">
+                    <!-- Product Image -->
+                    <img src="https://via.placeholder.com/100" alt="Product" class="w-20 h-20 border rounded-md" />
+
+                    <!-- Product Details -->
+                    <div class="flex-1">
+                        <p class="font-medium">I'm a product</p>
+                        <p class="text-gray-600">$15.00</p>
+                    </div>
+
+                    <!-- Quantity Selector -->
+                    <div class="flex items-center border ">
+                        <button class="px-2 text-gray-700 hover:bg-gray-100">-</button>
+                        <input type="text" value="48" class="w-12 text-center border-x px-1" />
+                        <button class="px-2 text-gray-700 hover:bg-gray-100">+</button>
+                    </div>
+                    
+
+                    <!-- Total Price -->
+                    <p class="w-16 text-right font-medium">$720.00</p>
+
+                    <!-- Delete Button -->
+                    <button class="text-gray-500 hover:text-red-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex items-center gap-4">
+                    <!-- Product Image -->
+                    <img src="https://via.placeholder.com/100" alt="Product" class="w-20 h-20 border rounded-md" />
+
+                    <!-- Product Details -->
+                    <div class="flex-1">
+                        <p class="font-medium">I'm a product</p>
+                        <p class="text-gray-600">$15.00</p>
+                    </div>
+
+                    <!-- Quantity Selector -->
+                    <div class="flex items-center border ">
+                        <button class="px-2 text-gray-700 hover:bg-gray-100">-</button>
+                        <input type="text" value="48" class="w-12 text-center border-x px-1" />
+                        <button class="px-2 text-gray-700 hover:bg-gray-100">+</button>
+                    </div>
+                    
+
+                    <!-- Total Price -->
+                    <p class="w-16 text-right font-medium">$720.00</p>
+
+                    <!-- Delete Button -->
+                    <button class="text-gray-500 hover:text-red-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+
+                <div class="mt-6 space-y-6 font-thin">
+                    <!-- Promo Code Section -->
+                    <div>
+                        <div class="flex items-center gap-2 cursor-pointer" onclick="togglePromo()">
+                            <i class="fa-solid fa-tag text-sm"></i>
+                            <span class="text-sm font-medium">Enter a promo code</span>
+                        </div>
+                        <div id="promoSection" class="hidden mt-2 flex gap-2">
+                            <input
+                                type="text"
+                                placeholder="Enter a promo code"
+                                class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+                            />
+                            <button class="px-4 py-2 text-sm font-medium text-white bg-black rounded-md hover:bg-gray-800">
+                                Apply
+                            </button>
+                        </div>
+                    </div>
+                
+                    <!-- Note Section -->
+                    <div>
+                        <div class="flex items-center gap-2 cursor-pointer" onclick="toggleNote()">
+                            <i class="fa-solid fa-note-sticky text-sm"></i>
+                            <span class="text-sm font-medium">Add a note</span>
+                        </div>
+                        <div id="noteSection" class="hidden mt-2">
+                            <textarea
+                                placeholder="e.g., Leave outside the front door"
+                                class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+                                rows="3"
+                            ></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                
             </div>
 
             <!-- Order Summary -->

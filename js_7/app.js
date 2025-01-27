@@ -18,4 +18,14 @@ closeButton.addEventListener("click", (e) => {
     cartMenu.classList.add("hidden");
   }, 1000);
 });
+// promo and note hide and unhide
+function togglePromo() {
+  const promoSection = document.getElementById("promoSection");
+  promoSection.classList.toggle("hidden");
+}
+
+function toggleNote() {
+  const noteSection = document.getElementById("noteSection");
+  noteSection.classList.toggle("hidden");
+}
 
